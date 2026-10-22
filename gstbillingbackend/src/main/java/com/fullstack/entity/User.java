@@ -1,6 +1,7 @@
 package com.fullstack.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,8 @@ public class User {
 
     private String userName;
 
+    @Column(unique = true)
+    @Email(message = "Email ID must be Valid")
     private String userEmailId;
 
     private String userPassword;

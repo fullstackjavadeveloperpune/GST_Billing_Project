@@ -2,12 +2,14 @@ server:
   port: 9999
 
 spring:
+  main:
+    allow-circular-references: true
 
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/gst_billing_db
     username: postgres
-    password: ${DB_PASS}
+    password: postgres
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,8 +19,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: your_email_id
-    password: your_password
+    username: jadhavkiran2011@gmail.com
+    password: nmfa zevh ygkl avws
     properties:
       mail:
         smtp:
