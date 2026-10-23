@@ -12,4 +12,13 @@ public interface IGSTBillService {
     Optional<GSTBill> findById(long invoiceId);
 
     List<GSTBill> findAll();
+
+    GSTBill update(long invoiceId, GSTBill gstBill);
+
+    List<GSTBill> searchByAnyInput(String input);
+
+    List<GSTBill> sortBy(String input);
+
+    void deleteById(long invoiceId);
+
 }
